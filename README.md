@@ -1,2 +1,3 @@
 # Git-How-To
-The basics of using Git
+Teaching repository containing documentation on how to install and configure  
+Git for newbies
