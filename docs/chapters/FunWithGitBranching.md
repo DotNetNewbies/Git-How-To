@@ -41,7 +41,9 @@
       branch. 
       Now, a bit of subtlety here. When you created your "Toy" branch, Git  
       privately took a snapshot of your current working directory and made  
-      that snapshot it's first "commit". Why is this important?  
+      that snapshot it's first "commit". Or, to be more precise, when you  
+      changed branches, the newly created branch has nothing in it thus your  
+      current working directory _is not changed_. Why is this important?  
       Simple. When you change branches, you need to make **_ABSOLUTELY SURE  
       THAT THERE ARE NO PENDING CHANGES IN YOUR WORKING DIRECTORY!_**  
       What does this mean? No "open" files, all editing completed, all editors  
@@ -98,6 +100,6 @@
       you can "play" all you want to as long as the repository you are  
       "playing" with is devoted solely to "play" because at the end of the  
       day, clean-up consists of simply deleting the repository root directory  
-      (the one that contains the .git folder).
+      (the one that contains the .git folder).  
       There will be more examples of branching and merging in this paper in the  
       section titled "process".  

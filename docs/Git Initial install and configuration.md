@@ -9,7 +9,7 @@
     , "Beyond Compare"
   ]
   , "Date": "2020-12-21"  
-  , "Author": "Bruce Lackore, Lead Engineer, Arizona Office of the Courts  "
+  , "Author": "Bruce Lackore, Lead Engineer, Arizona Administrative Office of the Courts  "
   , "Software Versions":
     [
       "Git version 2.29.2.3"
@@ -20,7 +20,7 @@
 
 ### Install, configure and perform basic activities using Git:
 
- 1. Install Git for Windows 10  
+ 1. Install Git for Windows 10  xxx
 
  2. Configure Git for Windows 10  
 
@@ -62,23 +62,23 @@ Version Control System.
 </details>
 
 <details>
-  <summary>Requirements</summary>
+  <summary>Requirements</summary>  
 
-    1. Administrative access on the host.  
-    2. A standardized location on the host to store local copies of repositories  
-      a. A suggestion is Users\<Your user name>\Documents\_Repos
+  1. Administrative access on the host.  
+  2. A standardized location on the host to store local copies of repositories  
+    a. A suggestion is Users\<Your user name>\Documents\_Repos  
 
 </details>
 
 <details>
-  <summary>Presumptions</summary>
+  <summary>Presumptions</summary>  
 
-    1.  Ability to open an administrative command prompt.  
-    2.  Ability to open an administrative PowerShell prompt.  
-    3.  Ability to cause the selected command shell to display hidden files  
-        and/or directories.
+  1.  Ability to open an administrative command prompt.  
+  2.  Ability to open an administrative PowerShell prompt.  
+  3.  Ability to cause the selected command shell to display hidden files  
+      and/or directories.  
  
-</details>
+</details>  
 
 <details>
   <summary>Software Needed</summary>
@@ -109,12 +109,12 @@ and configuration process:
 
 Execute the following commands to configure Git for your use:  
 
-  * git config --system core.longpaths true
-  * git config --global user.name "\<Your name\>"
-  * git config --global user.email \<Your Email address\>
-  * git config --global core.autocrlf input
+  * `git config --system core.longpaths true`
+  * `git config --global user.name "\<Your name\>"`
+  * `git config --global user.email \<Your Email address\>`
+  * `git config --global core.autocrlf input`
     * This last command ensures "Commit as-is, pull as Unix".
-  * git config --global credential.helper cache
+  * `git config --global credential.helper cache`
     * This helps with constant credential requests from those remote locations  
       that require credentials to access e.g. user name and password. GitHub  
       is like this (for now - they are changing their access system in August  
@@ -214,7 +214,38 @@ system_.  Much like your directories store items in hierarchal form, Git
 also stores it's working directory snapshots in a hierarchy. The details of  
 the hierarchy are un-important for the average user, it's just necessary to  
 understand the file system notion when dealing with branching and merging of  
-snapshots.
+snapshots.  
+
+One more aspect of git that should be noted is that whilst git is indeed a  
+version control system, it is, in reality, a file system masquerading as a  
+version control system. One of the larger concerns for most VCSs is storage  
+of "the right thing" meaning that managers have, in the past, made a  
+"command decision" and put in place a policy such that "only finished code is  
+to reside in the VCS".  
+
+At one point in time this might have been prudent but no longer. Moore's Law  
+has finally caught up with the storage world, meaning that it is no longer  
+dollar-prohibitive to store things on a hard drive. It used to be that space  
+was hundreds of dollars per 'K' of space. One can now, at the time of this  
+writing, go to the local computer store and spend a little over $400.00 and  
+take home a Winchester "Gold" harddrive with a _16 TeraByte_ capacity.  
+
+So...restricting content to "final" versions is no longer necessary or even  
+prudent - doing so only loses the development process and history of a  
+particular piece of code be it C#, SQL or whatever.  
+
+Git makes it especially attractive to store just about everything in that git  
+performs all sorts of behind-the-scenes optimizations that make the stored  
+blob as small as possible and because of its snapshot nature one may now trace  
+the entire development history of every single piece of code stored in the  
+repository - often an invaluable source of guidance when attempting  
+modifications to a system where the original is years old. So long as  
+management doesn't play the "blame game", it is often as valuable if not more  
+so to see the "paths not taken" when reviewing a particular piece of code in  
+preparation for modification.  
+
+So...short version - store your mistakes along with your successes! Don't skimp  
+on what you put in git due to "space" concerns. It's no longer an issue.  
 
 </details>
 
@@ -231,6 +262,13 @@ snapshots.
 [Fun with Branching][FunWithBranching-Url]
 
 </details>  
+
+<details>
+  <summary>Git Ignore</summary>
+
+[Git Ignore][GitIgnore-URL]
+
+  </details>
 
 <details>
   <summary>Scenarios</summary>
@@ -368,6 +406,25 @@ performing the git clone command as before.
 
 </details>  
 
+### Using Markdown
+
+<details>
+  <summary>Overview</summary>
+
+Markdown is an increasingly common formatting language.  This very document is 
+written in Markdown! More information is yet to come on this topic.
+
+</details>
+
+<details>
+  <summary>Using Markdown</summary>
+  
+More resources are available on:
+
+[Using Markdown][UsingMarkdown-Url]
+
+</details>
+
 ### Resources
 
 <details>
@@ -386,17 +443,19 @@ performing the git clone command as before.
 [Git][Git-Url]  
 [Visual Studio Code][VisualStudioCode-Url]  
 [Visual Studio Code Insiders][VisualStudioCodeInsiders-Url]  
-[(Optional) Beyond Compare Diff/Merge Tool][BeyondCompare-Url]
+[(Optional) Beyond Compare Diff/Merge Tool][BeyondCompare-Url]  
 
 [Git-Url]: https://git-scm.com/downloads  
-[VisualStudioCode-Url]: https://code.visualstudio.com/Download
-[VisualStudioCodeInsiders-Url]: https://code.visualstudio.com/insiders/
+[VisualStudioCode-Url]: https://code.visualstudio.com/Download  
+[VisualStudioCodeInsiders-Url]: https://code.visualstudio.com/insiders/  
 [BeyondCompare-Url]: https://www.scootersoftware.com/download.php  
 
-[GitConfigurationWalk-Through-Url]: chapters/GitInstallationWalk-Through.md
+[GitConfigurationWalk-Through-Url]: chapters/GitInstallationWalk-Through.md  
 [ConfigureGitBeyondCompare4-Url]: chapters/ConfigureBeyondCompare4AsADiffAndMergeTool.md  
 [TheThreeStates-Url]: chapters/TheThreeStatesOfAGitFile.md  
-[FunWithBranching-Url]: chapters/FunWithGitBranching.md
-[MoreFunWithBranching-Url]: chapters/MoreFunWithGitBranching.md
+[FunWithBranching-Url]: chapters/FunWithGitBranching.md  
+[MoreFunWithBranching-Url]: chapters/MoreFunWithGitBranching.md  
+[UsingMarkdown-URL]: chapters/UsingMarkdown.md  
+[GitIgnore-URL]: chapters/GitIgnore.md  
 
 </details>
